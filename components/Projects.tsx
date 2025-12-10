@@ -1,44 +1,45 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, ExternalLink, ScanSearch, Lock, Shield, Bug } from "lucide-react";
+import { Github, ExternalLink, Globe, MessageSquare, Shield, Plane } from "lucide-react";
 
 const projects = [
   {
-    icon: ScanSearch,
-    title: "VulnScanner Pro",
-    description:
-      "Automated vulnerability scanner with AI-powered threat detection and comprehensive reporting capabilities.",
-    tags: ["Python", "TensorFlow", "Docker", "PostgreSQL"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    icon: Lock,
-    title: "SecureAuth Framework",
-    description:
-      "Multi-factor authentication framework with biometric support and zero-trust architecture implementation.",
-    tags: ["Go", "WebAuthn", "FIDO2", "Redis"],
-    github: "#",
-    demo: "#",
-  },
-  {
     icon: Shield,
-    title: "ThreatHunter",
+    title: "HackSky - Zero-Trust ICS Gateway",
     description:
-      "Real-time threat intelligence platform with automated IOC collection and correlation engine.",
-    tags: ["Python", "Elasticsearch", "Kafka", "React"],
-    github: "#",
+      "Zero-Trust ICS Gateway Simulator with Post-Quantum Authentication using Kyber cryptography. Real-time access logging and detection of rogue nodes with Flask-based gateway.",
+    tags: ["Python", "Flask", "Kyber", "SQLite", "Socket"],
+    github: "https://github.com/anish-9387/HackSky",
     demo: "#",
   },
   {
-    icon: Bug,
-    title: "BugBounty Toolkit",
+    icon: MessageSquare,
+    title: "SeQura - Real-Time Chat App",
     description:
-      "Comprehensive bug bounty automation toolkit with reconnaissance, scanning, and reporting modules.",
-    tags: ["Bash", "Python", "Nuclei", "Burp Suite"],
-    github: "#",
+      "Secure real-time chat application with WebSocket integration, phone-based OTP authentication, online status indicators, and message scheduling features.",
+    tags: ["Next.js", "React", "WebSocket", "STOMP", "JWT"],
+    github: "https://github.com/anish-9387/SeQura-frontend",
     demo: "#",
+  },
+  {
+    icon: Plane,
+    title: "Wanderlust - Airbnb Clone",
+    description:
+      "Full-stack Airbnb clone with property listings, user authentication, reviews system, and interactive map integration for property locations.",
+    tags: ["Node.js", "Express", "MongoDB", "EJS", "Cloudinary"],
+    github: "https://github.com/anish-9387/Wanderlust",
+    demo: "https://wanderlust-mdwb.onrender.com/",
+  },
+  {
+    icon: Globe,
+    title: "English Learning Platform",
+    description:
+      "Interactive educational website with PDF and PPT content viewer, responsive design, and comprehensive learning resources for English language students.",
+    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+    github: "https://github.com/anish-9387/English-Website-PBL",
+    demo: "https://pbl-for-english.vercel.app/",
   },
 ];
 
@@ -68,7 +69,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 transition-all"
+              className="group bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="p-3 bg-green-500/10 rounded-lg border border-green-500/20">

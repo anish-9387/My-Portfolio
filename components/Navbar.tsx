@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -78,7 +79,7 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             aria-label="Go to Home section"
           >
-            <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center overflow-hidden transition-all group-hover:shadow-[0_0_20px_rgba(34,197,94,0.5)] cursor-pointer">
+            <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center overflow-hidden transition-all group-hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] cursor-pointer">
               <img
                 src="/photo.jpg"
                 alt="Logo"
@@ -110,7 +111,7 @@ export default function Navbar() {
                 {(activeSection === item.id || hoveredSection === item.id) && (
                   <motion.span
                     layoutId={hoveredSection === item.id && activeSection !== item.id ? "navbar-hover-indicator" : "navbar-indicator"}
-                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-green-500"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-500"
                     transition={{
                       type: "spring",
                       stiffness: 380,
