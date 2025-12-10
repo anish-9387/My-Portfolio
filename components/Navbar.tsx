@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "About", id: "about" },
@@ -16,12 +16,15 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredSection, setHoveredSection] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+
       const sections = navItems.map((item) => item.id);
       const scrollPosition = window.scrollY + 100;
-      
+
       // Check if we're in hero section (no active state)
       const heroElement = document.getElementById("hero");
       if (heroElement) {
@@ -61,16 +64,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-green-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-black/90 backdrop-blur-md border-b border-green-500/20"
+        : "bg-transparent"
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
           {/* Logo on the left */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 group"
             aria-label="Go to Home section"
           >
-            <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center overflow-hidden transition-all group-hover:shadow-[0_0_20px_rgba(34,197,94,0.5)] cursor-pointer">
               <img
                 src="/photo.jpg"
                 alt="Logo"
@@ -80,76 +88,76 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Navigation links on the right */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 onMouseEnter={() => setHoveredSection(item.id)}
                 onMouseLeave={() => setHoveredSection("")}
-                className="relative px-4 py-2 text-gray-300 transition-colors font-medium cursor-pointer"
+                className="font-mono text-sm text-gray-400 hover:text-green-400 transition-colors relative group cursor-pointer"
               >
-                {(activeSection === item.id || hoveredSection === item.id) && (
-                  <>
-                    <motion.span
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="text-green-400"
-                    >
-                      &lt;{item.name} /&gt;
-                    </motion.span>
-                    <motion.div
-                      layoutId={hoveredSection === item.id ? "navbar-hover-indicator" : "navbar-indicator"}
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-500"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    />
-                  </>
+                <span className="text-green-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {"<"}
+                </span>
+                {activeSection === item.id && (
+                  <span className="text-green-400">{item.name}</span>
                 )}
-                {activeSection !== item.id && hoveredSection !== item.id && <span>{item.name}</span>}
+                {activeSection !== item.id && <span>{item.name}</span>}
+                <span className="text-green-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {"/>"}
+                </span>
+                {(activeSection === item.id || hoveredSection === item.id) && (
+                  <motion.span
+                    layoutId={hoveredSection === item.id && activeSection !== item.id ? "navbar-hover-indicator" : "navbar-indicator"}
+                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-green-500"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30,
+                    }}
+                  />
+                )}
               </button>
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-green-500 p-2  cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-green-400 hover:text-green-300 transition-colors cursor-pointer"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-black/95 border-b border-green-500/20"
-        >
-          <div className="px-4 py-4 space-y-3">
-            {navItems.map((item) => (
-              <button
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden mt-4 pb-4 border-t border-green-500/20 pt-4 cursor-pointer"
+          >
+            {navItems.map((item, index) => (
+              <motion.button
                 key={item.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-2 rounded-md transition-colors ${
-                  activeSection === item.id
-                    ? "bg-green-500/10 text-green-400"
-                    : "text-gray-300 hover:bg-green-500/5 hover:text-green-400"
-                }`}
+                className={`block w-full text-left py-3 font-mono transition-colors ${activeSection === item.id
+                  ? "text-green-400"
+                  : "text-gray-400 hover:text-green-400"
+                  }`}
               >
-                {activeSection === item.id ? `<${item.name} />` : item.name}
-              </button>
+                {">"} {item.name}
+              </motion.button>
             ))}
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </div>
     </nav>
   );
 }

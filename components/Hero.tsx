@@ -33,7 +33,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
         >
-          <span className="text-white">Hello, I&apos;m </span>
+          <span className="text-green-200">Hello, I&apos;m </span>
           <span className="text-green-500">Anish Mall</span>
         </motion.h1>
 
@@ -45,7 +45,7 @@ export default function Hero() {
           className="flex items-center justify-center gap-2 mb-6"
         >
           <ChevronRight className="w-6 h-6 text-green-500" />
-          <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-mono">
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-green-100 font-mono">
             Full Stack Web Developer
           </h2>
         </motion.div>
@@ -57,8 +57,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Protecting digital assets and hunting vulnerabilities. Specialized in
-          penetration testing, threat analysis, and security architecture.
+          Transforming ideas into reality through code. Passionate about building
+          innovative web solutions with a keen enthusiasm for cybersecurity.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -70,14 +70,14 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollToSection("projects")}
-            className="group px-8 py-3 bg-green-500 text-black font-semibold rounded-md hover:bg-green-400 transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
+            className="group px-8 py-3 bg-green-500 text-black font-semibold rounded-md hover:bg-green-400 transition-all flex items-center gap-2 w-full sm:w-auto justify-center cursor-pointer"
           >
             &lt; View Projects /&gt;
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="px-8 py-3 border border-green-500 text-green-400 font-semibold rounded-md hover:bg-green-500/10 transition-all w-full sm:w-auto"
+            className="px-8 py-3 border border-green-500 text-green-400 font-semibold rounded-md hover:bg-green-500/10 transition-all w-full sm:w-auto cursor-pointer"
           >
             Contact Me
           </button>
