@@ -70,15 +70,20 @@ export default function Background() {
 
     // Create binary characters evenly distributed
     const binaryChars: BinaryChar[] = [];
-    const rows = Math.floor(canvas.height / 30); // Character spacing vertically
-    const cols = Math.floor(canvas.width / 40); // Character spacing horizontally
+    const isMobile = window.innerWidth < 768;
+    
+    // For mobile: fewer characters with more spacing to avoid clustering
+    const rows = Math.floor(canvas.height / (isMobile ? 60 : 30)); // Double spacing on mobile
+    const cols = Math.floor(canvas.width / (isMobile ? 80 : 40)); // Double spacing on mobile
 
     // Create a grid-like pattern for even distribution
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < cols; col++) {
         // pass canvas and ctx to the BinaryChar constructor
-        const char = new BinaryChar(col * 40 + Math.random() * 20, canvas, ctx);
-        char.y = row * 30 + Math.random() * 20;
+        const spacing = isMobile ? 80 : 40;
+        const char = new BinaryChar(col * spacing + Math.random() * 20, canvas, ctx);
+        char.y = row * (isMobile ? 60 : 30) + Math.random() * 20;
+        char.opacity = isMobile ? 0.08 + Math.random() * 0.05 : 0.15 + Math.random() * 0.1; // Lighter on mobile
         binaryChars.push(char);
       }
     }
