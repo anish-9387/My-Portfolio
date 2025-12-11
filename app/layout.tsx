@@ -16,21 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Anish Mall",
   description: "Portfolio of Anish Mall - Full Stack Web Developer specializing in MERN stack, Next.js, and modern web technologies. Explore my projects, skills, and experience.",
-  openGraph: {
-    title: "Anish Mall",
-    description: "Portfolio of Anish Mall - Full Stack Web Developer specializing in MERN stack, Next.js, and modern web technologies.",
-    url: "https://anish9387.vercel.app",
-    siteName: "Anish Mall Portfolio",
-    images: [
-      {
-        url: "/image.png",
-        width: 1200,
-        height: 630,
-        alt: "Portfolio",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
+  icons: {
+    icon: "/image.png",
+    shortcut: "/image.png",
+    apple: "/image.png",
   },
 };
 
