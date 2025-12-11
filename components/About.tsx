@@ -8,7 +8,7 @@ const stats = [
   { icon: FolderGit2, label: "Projects Completed", value: "10+" },
   { icon: Code2, label: "Technologies Learned", value: "15+" },
   { icon: Trophy, label: "Hackathons Participated", value: "5+" },
-  { icon: Calendar, label: "Years of Experience", value: "1+" },
+  { icon: Calendar, label: "Years of Experience", value: "1.5+" },
 ];
 
 export default function About() {

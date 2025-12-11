@@ -1,9 +1,22 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from "lucide-react";
+import { FormEvent } from "react";
 
 export default function Contact() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+
+    const mailtoLink = `mailto:anishmall3879@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    window.location.href = mailtoLink;
+  };
   return (
     <section id="contact" className="min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
@@ -18,9 +31,8 @@ export default function Contact() {
             // Get In Touch
           </h2>
           <div className="h-1 w-24 bg-green-500 mx-auto mb-6"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Have a security concern or want to collaborate? Let's connect and discuss how
-            we can work together.
+          <p className="text-gray-400 max-w-3xl mx-auto">
+            Available for freelance opportunities and collaborations. Let&apos;s connect and bring your ideas to life.
           </p>
         </motion.div>
 
@@ -31,7 +43,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6"
+              className="bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300"
             >
               <h3 className="text-xl font-bold text-green-400 mb-6 flex items-center gap-2">
                 <span className="text-green-500">&gt;</span> Contact Info
@@ -45,10 +57,10 @@ export default function Contact() {
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Email</p>
                     <a
-                      href="mailto:john@cybersec.dev"
+                      href="mailto:anishmall3879@gmail.com"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      john@cybersec.dev
+                      anishmall3879@gmail.com
                     </a>
                   </div>
                 </div>
@@ -60,10 +72,10 @@ export default function Contact() {
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Phone</p>
                     <a
-                      href="tel:+15551234567"
+                      href="tel:+919510779387"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      +1 (555) 123-4567
+                      +91 9510779387
                     </a>
                   </div>
                 </div>
@@ -74,7 +86,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm mb-1">Location</p>
-                    <p className="text-cyan-400">San Francisco, CA</p>
+                    <p className="text-cyan-400">Chennai, India</p>
                   </div>
                 </div>
               </div>
@@ -86,7 +98,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6"
+              className="bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300"
             >
               <h3 className="text-xl font-bold text-green-400 mb-6 flex items-center gap-2">
                 <span className="text-green-500">&gt;</span> Connect
@@ -94,25 +106,25 @@ export default function Contact() {
 
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/anish-9387"
                   className="p-3 bg-green-500/10 rounded-lg border border-green-500/20 hover:bg-green-500/20 hover:border-green-500/40 transition-all"
                   aria-label="GitHub"
                 >
                   <Github className="w-6 h-6 text-green-400" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/anish-mall/"
                   className="p-3 bg-green-500/10 rounded-lg border border-green-500/20 hover:bg-green-500/20 hover:border-green-500/40 transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6 text-green-400" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/anish_0308/"
                   className="p-3 bg-green-500/10 rounded-lg border border-green-500/20 hover:bg-green-500/20 hover:border-green-500/40 transition-all"
-                  aria-label="Twitter"
+                  aria-label="Instagram"
                 >
-                  <Twitter className="w-6 h-6 text-green-400" />
+                  <Instagram className="w-6 h-6 text-green-400" />
                 </a>
               </div>
             </motion.div>
@@ -123,13 +135,13 @@ export default function Contact() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6"
+            className="bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300"
           >
             <h3 className="text-xl font-bold text-green-400 mb-6 flex items-center gap-2">
               <span className="text-green-500">&gt;</span> Send Message
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-gray-400 text-sm mb-2">
                   Name
@@ -137,7 +149,9 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  placeholder="John Doe"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
                   className="w-full px-4 py-3 bg-black/50 border border-green-500/20 rounded-md text-white placeholder-gray-600 focus:outline-none focus:border-green-500/40 transition-colors"
                 />
               </div>
@@ -149,7 +163,9 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  placeholder="john@example.com"
+                  name="email"
+                  placeholder="Enter your email id"
+                  required
                   className="w-full px-4 py-3 bg-black/50 border border-green-500/20 rounded-md text-white placeholder-gray-600 focus:outline-none focus:border-green-500/40 transition-colors"
                 />
               </div>
@@ -161,7 +177,9 @@ export default function Contact() {
                 <input
                   type="text"
                   id="subject"
-                  placeholder="Security Consultation"
+                  name="subject"
+                  placeholder="Enter the subject"
+                  required
                   className="w-full px-4 py-3 bg-black/50 border border-green-500/20 rounded-md text-white placeholder-gray-600 focus:outline-none focus:border-green-500/40 transition-colors"
                 />
               </div>
@@ -172,8 +190,10 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
-                  placeholder="Tell me about your project..."
+                  placeholder="Enter message"
+                  required
                   className="w-full px-4 py-3 bg-black/50 border border-green-500/20 rounded-md text-white placeholder-gray-600 focus:outline-none focus:border-green-500/40 transition-colors resize-none"
                 ></textarea>
               </div>

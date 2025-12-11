@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home(){
   return(
@@ -13,7 +14,6 @@ export default function Home(){
       <Background />
       <Navbar />
       
-      {/* Main content */}
       <div className="relative z-10">
         <Hero />
         <About />
@@ -21,6 +21,7 @@ export default function Home(){
         <Skills />
         <Resume />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

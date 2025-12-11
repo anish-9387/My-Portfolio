@@ -61,7 +61,7 @@ export default function Hero() {
           innovative web solutions with a keen enthusiasm for cybersecurity.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

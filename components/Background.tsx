@@ -44,8 +44,8 @@ class BinaryChar {
   }
 
   draw() {
-    this.ctx.font = `${this.size}px "Courier New", monospace`; // Robotic monospace font
-    this.ctx.fillStyle = `rgba(0, 255, 65, ${this.opacity})`; // Bright cyber green
+    this.ctx.font = `${this.size}px "Courier New", monospace`;
+    this.ctx.fillStyle = `rgba(0, 255, 65, ${this.opacity})`;
     this.ctx.fillText(this.char, this.x, this.y);
   }
 }
@@ -71,7 +71,7 @@ export default function Background() {
     // Create binary characters evenly distributed
     const binaryChars: BinaryChar[] = [];
     const isMobile = window.innerWidth < 768;
-    
+
     // For mobile: fewer characters with more spacing to avoid clustering
     const rows = Math.floor(canvas.height / (isMobile ? 60 : 30)); // Double spacing on mobile
     const cols = Math.floor(canvas.width / (isMobile ? 80 : 40)); // Double spacing on mobile

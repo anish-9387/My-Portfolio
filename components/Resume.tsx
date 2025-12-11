@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import { motion } from "framer-motion";
@@ -5,50 +6,36 @@ import { Briefcase, GraduationCap, Award, Download } from "lucide-react";
 
 const experience = [
   {
-    title: "Senior Security Analyst",
-    company: "CyberShield Corp",
-    period: "2022 - Present",
+    title: "Full Stack Web Developer",
+    company: "Personal Projects & Hackathons",
+    period: "2024 - Present",
     description:
-      "Lead penetration testing engagements and security assessments for Fortune 500 clients. Developed automated vulnerability detection tools.",
+      "Built full-stack web applications using MERN stack, Next.js, and modern web technologies. Created SeQura real-time chat app, Wanderlust Airbnb clone, and Zero-Trust ICS Gateway simulator.",
   },
   {
-    title: "Security Consultant",
-    company: "SecureNet Solutions",
-    period: "2020 - 2022",
+    title: "Frontend Developer Intern",
+    company: "Spazorlabs",
+    period: "Oct 2025 - Present",
     description:
-      "Conducted red team operations and security audits. Implemented security frameworks and provided remediation guidance.",
-  },
-  {
-    title: "Junior Penetration Tester",
-    company: "TechDefense Inc",
-    period: "2018 - 2020",
-    description:
-      "Performed vulnerability assessments and penetration testing. Assisted in security research and tool development.",
+      "Developed and implemented user-focused frontend features for web applications using React, Next.js, and Tailwind CSS. Collaborated effectively with team members to build responsive, scalable, and visually consistent user interfaces.",
   },
 ];
 
 const education = [
   {
-    degree: "M.S. Cybersecurity",
-    school: "Stanford University",
-    period: "2016 - 2018",
+    degree: "B.Tech in CSE w/s in Cyber Security",
+    school: "SRM Institute of Science and Technology",
+    period: "2024 - 2028",
     description:
-      "Specialized in network security and cryptography. Thesis on AI-powered threat detection.",
-  },
-  {
-    degree: "B.S. Computer Science",
-    school: "MIT",
-    period: "2012 - 2016",
-    description:
-      "Focus on systems programming and security. Dean's List all semesters.",
+      "Currently pursuing B.Tech in CSE w/s in Cyber Security from SRMIST, Kattankulathur. Strong foundation in Data Structures & Algorithms, Web Development, and Database Management Systems.",
   },
 ];
 
 const awards = [
-  "Bug Bounty Hall of Fame - Microsoft",
-  "DEF CON CTF Top 10 Finalist",
-  "OSCP, OSCE, OSWE Certifications",
-  "Published Security Researcher",
+  "Top 60 finalists in Kaspersky x MIT Hackathon 2025",
+  "Got 93% (Top 1%) in NPTEL Fundamentals of OODP",
+  "Got 94% in NPTEL Programming in Java",
+  "Got 274th rank in THM-Industrial Intrusion CTF",
 ];
 
 export default function Resume() {
@@ -68,10 +55,14 @@ export default function Resume() {
             </h2>
             <div className="h-1 w-24 bg-green-500"></div>
           </div>
-          <button className="flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-semibold rounded-md hover:bg-green-400 transition-all w-full sm:w-auto justify-center">
+          <a
+            href="/Anish Mall.pdf"
+            download="Anish_Mall_Resume.pdf"
+            className="flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-semibold rounded-md hover:bg-green-400 transition-all w-full sm:w-auto justify-center"
+          >
             <Download className="w-5 h-5" />
             Download CV
-          </button>
+          </a>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -98,7 +89,7 @@ export default function Resume() {
                   className="relative"
                 >
                   <div className="absolute -left-[41px] w-4 h-4 rounded-full bg-green-500 border-4 border-black"></div>
-                  <div className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6">
+                  <div className="bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300">
                     <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
                       <h4 className="text-lg font-bold text-white">{job.title}</h4>
                       <span className="text-sm text-green-400 font-mono">{job.period}</span>
@@ -135,7 +126,7 @@ export default function Resume() {
                   className="relative"
                 >
                   <div className="absolute -left-[41px] w-4 h-4 rounded-full bg-green-500 border-4 border-black"></div>
-                  <div className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6">
+                  <div className="bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300">
                     <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
                       <h4 className="text-lg font-bold text-white">{edu.degree}</h4>
                       <span className="text-sm text-green-400 font-mono">{edu.period}</span>
@@ -162,7 +153,7 @@ export default function Resume() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6"
+              className="bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300"
             >
               <ul className="space-y-3">
                 {awards.map((award, index) => (
