@@ -9,7 +9,6 @@ export default function NoDemoLayout({
   return (
     <div className="relative min-h-screen">
       <Background />
-      <Navbar />
       <div className="relative z-10">
         {children}
       </div>
