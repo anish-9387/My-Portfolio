@@ -12,7 +12,7 @@ const projects = [
       "Zero-Trust ICS Gateway Simulator with Post-Quantum Authentication using Kyber cryptography. Real-time access logging and detection of rogue nodes with Flask-based gateway.",
     tags: ["Python", "Flask", "Kyber", "SQLite", "Socket"],
     github: "https://github.com/anish-9387/HackSky",
-    demo: "#",
+    demo: "/no-demo",
   },
   {
     icon: MessageSquare,
@@ -21,7 +21,7 @@ const projects = [
       "Secure real-time chat application with WebSocket integration, phone-based OTP authentication, online status indicators, and message scheduling features.",
     tags: ["Next.js", "React", "WebSocket", "STOMP", "JWT"],
     github: "https://github.com/anish-9387/SeQura-frontend",
-    demo: "#",
+    demo: "/no-demo",
   },
   {
     icon: Plane,
