@@ -139,8 +139,9 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 pb-4 border-t border-green-500/20 pt-4 cursor-pointer"
+            className="md:hidden mt-4 pb-4 border-t border-green-500/20 pt-4 cursor-pointer bg-black/90 backdrop-blur-md rounded-lg px-4"
           >
+
             {navItems.map((item, index) => (
               <motion.button
                 key={item.id}

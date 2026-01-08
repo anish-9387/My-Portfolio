@@ -57,11 +57,12 @@ export default function Resume() {
           </div>
           <a
             href="/Anish Mall.pdf"
-            download="Anish_Mall_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 bg-green-500 text-black font-semibold rounded-md hover:bg-green-400 transition-all w-full sm:w-auto justify-center"
           >
             <Download className="w-5 h-5" />
-            Download CV
+            View CV
           </a>
         </motion.div>
 
