@@ -10,14 +10,14 @@ const experience = [
     company: "Personal Projects & Hackathons",
     period: "2024 - Present",
     description:
-      "Built full-stack web applications using MERN stack, Next.js, and modern web technologies. Created SeQura real-time chat app, Wanderlust Airbnb clone, and Zero-Trust ICS Gateway simulator.",
+      "Built full-stack web applications using MERN stack, Next.js, and modern web technologies. Created SeQura real-time chat app, Wanderlust - Airbnb clone, and Zero-Trust ICS Gateway simulator.",
   },
   {
-    title: "Frontend Developer Intern",
+    title: "Full Stack Developer Intern",
     company: "Spazorlabs",
-    period: "Oct 2025 - Present",
+    period: "Oct 2025 - Mar 2026",
     description:
-      "Developed and implemented user-focused frontend features for web applications using React, Next.js, and Tailwind CSS. Collaborated effectively with team members to build responsive, scalable, and visually consistent user interfaces.",
+      "Developed and implemented user-focused frontend features for web applications using React, Next.js, and Tailwind CSS. Contributed to backend development on multiple real-life client projects. Collaborated effectively with team members to build responsive, scalable, and visually consistent user interfaces.",
   },
 ];
 

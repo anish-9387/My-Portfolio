@@ -10,6 +10,4 @@ This is my portfolio showcasing my skills and experience in this technological-a
 - **Icons:** Lucide React, DevIcons CDN
 - **Language:** TypeScript
 
-#### Built with ❤️ using Next.js & Tailwind CSS
-
 ### Portfolio is live at https://itzanish.is-a.dev

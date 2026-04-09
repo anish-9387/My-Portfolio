@@ -87,11 +87,6 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-400">
             <p className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-center">
               <span>© {currentYear} Anish Mall.</span>
-              <span className="flex items-center gap-1 sm:gap-2">
-                Built with
-                <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 inline animate-pulse" />
-              </span>
-              <span>using Next.js & Tailwind CSS</span>
             </p>
             <p className="font-mono text-green-500 text-xs sm:text-sm">
               &lt;/&gt; with passion
