@@ -2,18 +2,18 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 — Anish Mall",
+  title: "Page Not Found",
 };
 
 export default function NotFound() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
-      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Error 404</span>
+      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Page Not Found</span>
       <h1 className="mt-4 font-display text-[clamp(3rem,10vw,10rem)] leading-none tracking-tight">
         <span className="text-gradient italic">Lost</span> in space.
       </h1>
       <p className="mt-6 max-w-md text-muted-foreground">
-        The page you&apos;re looking for doesn&apos;t exist — or maybe it was never built.
+        The page you&apos;re looking for doesn&apos;t exist - or maybe it was never built.
       </p>
       <Link
         href="/"

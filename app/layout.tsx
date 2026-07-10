@@ -54,7 +54,7 @@ export default function RootLayout({
             {children}
           </main>
           <footer className="relative mt-32 border-t border-border/60 py-10 text-center text-xs text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Anish Mall - crafted with intention.</p>
+            <p>&copy; {new Date().getFullYear()} Anish Mall</p>
           </footer>
         </LenisProvider>
         <Analytics />
