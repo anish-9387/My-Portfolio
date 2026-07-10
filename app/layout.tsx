@@ -1,17 +1,33 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
+import Nav from "@/components/Nav";
+import CustomCursor from "@/components/CustomCursor";
+import AmbientBackground from "@/components/AmbientBackground";
+import LenisProvider from "@/components/LenisProvider";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Anish Mall",
-  description: "Portfolio of Anish Mall - Full Stack Web Developer specializing in MERN stack, Next.js, and modern web technologies. Explore my projects, skills, and experience.",
+  title: "Anish Mall - AI, Cybersecurity & Full Stack Engineer",
+  description: "Portfolio of Anish Mall - building secure, intelligent, production-grade systems at the intersection of AI, cybersecurity and full-stack engineering.",
   icons: {
     icon: "/image.png",
     shortcut: "/image.png",
@@ -25,12 +41,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        {children}
+        <LenisProvider>
+          <AmbientBackground />
+          <CustomCursor />
+          <Nav />
+          <main className="relative">
+            {children}
+          </main>
+          <footer className="relative mt-32 border-t border-border/60 py-10 text-center text-xs text-muted-foreground">
+            <p>&copy; {new Date().getFullYear()} Anish Mall - crafted with intention.</p>
+          </footer>
+        </LenisProvider>
         <Analytics />
       </body>
     </html>
