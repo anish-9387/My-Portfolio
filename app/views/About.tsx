@@ -22,11 +22,11 @@ export default function AboutView() {
             <Reveal delay={0.15}>
               <div className="glass sticky top-32 rounded-3xl p-8">
                 <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Identity</div>
-                <dl className="mt-6 space-y-4 text-sm">
-                  <div><dt className="text-muted-foreground">Name</dt><dd className="mt-0.5">{profile.name}</dd></div>
-                  <div><dt className="text-muted-foreground">Focus</dt><dd className="mt-0.5">{profile.role}</dd></div>
-                  <div><dt className="text-muted-foreground">Based</dt><dd className="mt-0.5">{profile.location}</dd></div>
-                  <div><dt className="text-muted-foreground">Currently</dt><dd className="mt-0.5">B.Tech CSE - Cyber Security, SRMIST</dd></div>
+                <dl className="mt-6 space-y-4 text-md">
+                  <div><dt className="text-muted-foreground">Name</dt><dd className="mt-0.5 font-semibold">{profile.name}</dd></div>
+                  <div><dt className="text-muted-foreground">Focus</dt><dd className="mt-0.5 font-semibold">{profile.role}</dd></div>
+                  <div><dt className="text-muted-foreground">Based</dt><dd className="mt-0.5 font-semibold">{profile.location}</dd></div>
+                  <div><dt className="text-muted-foreground">Currently</dt><dd className="mt-0.5 font-semibold">B.Tech CSE - Cyber Security, SRMIST</dd></div>
                 </dl>
               </div>
             </Reveal>
