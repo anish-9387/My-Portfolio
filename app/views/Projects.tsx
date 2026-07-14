@@ -65,7 +65,6 @@ function ProjectCard({ project, index }: { project: (typeof projects)[number]; i
       transition={{ duration: 1, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      data-cursor="view"
       className="glass group relative overflow-hidden rounded-3xl p-8 sm:p-12"
       style={{
         transform: "perspective(1200px) rotateX(var(--rx,0)) rotateY(var(--ry,0))",

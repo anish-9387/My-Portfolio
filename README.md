@@ -6,7 +6,7 @@ This is my portfolio showcasing my skills and experience in this technological-a
 
 - **Framework:** Next.js 15.5.4 (React 19)
 - **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
+- **Animations:** Framer Motion, Lenis
 - **Icons:** Lucide React, DevIcons CDN
 - **Language:** TypeScript
 

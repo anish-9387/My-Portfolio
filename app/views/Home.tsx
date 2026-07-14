@@ -82,7 +82,6 @@ export default function HomeView() {
               >
                 <Link
                   href="/projects"
-                  data-cursor="view"
                   className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_40px_-5px_var(--glow)]"
                 >
                   View selected work

@@ -109,9 +109,7 @@
     background: color-mix(in oklch, var(--color-foreground) 22%, transparent);
   }
 
-  @media (not (hover: hover)), (pointer: coarse) {
-    .custom-cursor-wrapper { display: none; }
-  }
+
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
   ::selection { background: color-mix(in oklab, var(--primary) 40%, transparent); color: var(--foreground); }
 }
@@ -161,6 +159,4 @@
 .animate-aurora { animation: aurora-shift 20s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
 
-@media (hover: hover) and (pointer: fine) {
-  html, body, * { cursor: none !important; }
-}
+

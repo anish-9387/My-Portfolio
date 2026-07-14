@@ -97,8 +97,8 @@ export const projects = [
     github: "https://github.com/anish-9387/HackSky",
   },
   {
-    slug: "mesh-ai",
-    name: "AI Mesh Optimizer",
+    slug: "crunch-3d",
+    name: "Crunch3D",
     tagline: "AI-generated 3D → production-ready assets",
     description:
       "Research platform that transforms high-polygon AI-generated meshes from Tripo3D, Meshy and Shap-E into optimized, production-ready 3D models.",
@@ -108,8 +108,8 @@ export const projects = [
     github: "https://github.com/anish-9387/Optimesh",
   },
   {
-    slug: "revio",
-    name: "Revio",
+    slug: "manch",
+    name: "Manch",
     tagline: "Event platform beyond Devfolio & Unstop",
     description:
       "Customizable event and hackathon management platform with advanced workflow automation, submission review and organizer tooling.",
@@ -143,20 +143,20 @@ export const skills = [
 
 export const achievements = [
   { title: "Hack-O-Hire Finalist", detail: "Top 48 finalist - Hack-O-Hire", year: "2026" },
-  { title: "Finalist - USAII Global AI Hackathon", detail: "Hackathon conducted by USAII", year: "2026" },
-  { title: "3rd Place - Ossome Hacks 3.0", detail: "Hackathon conducted by Github community", year: "2026" },
-  { title: "Special Mention - Infinity Ideathon", detail: "Ideathon conducted by ECell", year: "2026" },
-  { title: "Top 60 - HackSky '25", detail: "Cybersecurity hackathon", year: "2025" },
-  { title: "Rank 274 - TryHackMe ICS CTF", detail: "Industrial Intrusion CTF global rank", year: "2025" },
+  { title: "Finalist - USAII Global AI Hackathon", detail: "Hackathon conducted by USAII", year: "2026", certImage: "/certificate_USAII.png" },
+  { title: "3rd Place - Ossome Hacks 3.0", detail: "Hackathon conducted by Github community", year: "2026", certImage: "/certificate_OssomeHacks.png" },
+  { title: "Special Mention - Infinity Ideathon", detail: "Ideathon conducted by ECell", year: "2026", certImage: "/certificate_InfinityIdeathon.png" },
+  { title: "Top 60 - HackSky '25", detail: "Cybersecurity hackathon", year: "2025", certImage: "/certificate_HackSky.png" },
+  { title: "Rank 274 - TryHackMe ICS CTF", detail: "Industrial Intrusion CTF global rank", year: "2025", certImage: "/certificate_TryHackMeICS.png" },
 ];
 
 export const certifications = [
-  { name: "AWS Certified Developer - Associate", issuer: "Amazon Web Services", tag: "Cloud" },
-  { name: "Fortinet Certified Associate (FCA)", issuer: "Fortinet", tag: "Security" },
-  { name: "Fortinet Certified Fundamentals (FCF)", issuer: "Fortinet", tag: "Security" },
-  { name: "Cryptography & Network Security", issuer: "NPTEL", tag: "Security" },
-  { name: "Programming in Java", issuer: "NPTEL", tag: "Language" },
-  { name: "Object Oriented Design & Programming", issuer: "NPTEL", tag: "Engineering" },
+  { name: "AWS Certified Developer - Associate", issuer: "Amazon Web Services", tag: "Cloud", certImage: "/certificate_AWSDeveloperAssociate.png" },
+  { name: "Fortinet Certified Associate (FCA)", issuer: "Fortinet", tag: "Security", certImage: "/certificate_FortinetAssociate.png" },
+  { name: "Fortinet Certified Fundamentals (FCF)", issuer: "Fortinet", tag: "Security", certImage: "/certificate_FortinetFundamental.png" },
+  { name: "Cryptography & Network Security", issuer: "NPTEL", tag: "Security", certImage: "/certificate_CryptographyNPTEL.png" },
+  { name: "Programming in Java", issuer: "NPTEL", tag: "Language", certImage: "/certificate_JavaNPTEL.png" },
+  { name: "Object Oriented Design & Programming", issuer: "NPTEL", tag: "Engineering", certImage: "/certificate_OODPNPTEL.png" },
 ];
 
 export const education = [

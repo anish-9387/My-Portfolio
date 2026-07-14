@@ -3,7 +3,6 @@ import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
 import Nav from "@/components/Nav";
-import CustomCursor from "@/components/CustomCursor";
 import AmbientBackground from "@/components/AmbientBackground";
 import LenisProvider from "@/components/LenisProvider";
 
@@ -48,7 +47,6 @@ export default function RootLayout({
       >
         <LenisProvider>
           <AmbientBackground />
-          <CustomCursor />
           <Nav />
           <main className="relative">
             {children}
